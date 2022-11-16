@@ -1,6 +1,6 @@
-.overview{
-    .container{
-        .Statistics{
+.overview {
+    .container {
+        .Statistics {
             display: flex;
             justify-content: space-between;
             background: #FFFFFF;
@@ -8,10 +8,12 @@
             border: 1px solid #DFE0EB;
             border-radius: 8px;
             overflow: hidden;
-            .dashboard_chart{
+
+            .dashboard_chart {
                 width: calc(100% - 342px);
                 padding: 32px;
-                .title{
+
+                .title {
                     font-family: 'Mulish';
                     font-style: normal;
                     font-weight: 700;
@@ -21,11 +23,13 @@
                     color: #252733;
                     margin-bottom: 8px;
                 }
-                .time_trends{
+
+                .time_trends {
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 54px;
-                    .time{
+
+                    .time {
                         font-family: 'Mulish';
                         font-style: normal;
                         font-weight: 400;
@@ -34,9 +38,12 @@
                         letter-spacing: 0.1px;
                         color: #9FA2B4;
                     }
-                    .indicator_colors{
+
+                    .indicator_colors {
                         display: flex;
-                        .today, .yesterday{
+
+                        .today,
+                        .yesterday {
                             display: flex;
                             align-items: center;
                             font-family: 'Mulish';
@@ -47,9 +54,11 @@
                             letter-spacing: 0.1px;
                             color: #9FA2B4;
                         }
-                        .today{
+
+                        .today {
                             margin-right: 32px;
-                            .today_color{
+
+                            .today_color {
                                 margin-top: 1px;
                                 margin-right: 8px;
                                 width: 16px;
@@ -58,8 +67,9 @@
                                 background-color: #3751FF;
                             }
                         }
-                        .yesterday{
-                            .yesterday_color{
+
+                        .yesterday {
+                            .yesterday_color {
                                 margin-top: 1px;
                                 margin-right: 8px;
                                 width: 16px;
@@ -70,13 +80,15 @@
                         }
                     }
                 }
-                #canvas{
+
+                #canvas {
                     width: 47.6vw;
                     height: 26.4vw;
                     border: 1px solid #9FA2B4;
                 }
             }
-            .indicators{
+
+            .indicators {
                 width: 20vw;
                 height: 39vw;
                 border-left: 1px solid #DFE0EB;
@@ -84,7 +96,8 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                .indicators_item{
+
+                .indicators_item {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -92,10 +105,12 @@
                     width: 100%;
                     height: 25%;
                     border-bottom: 1px solid #DFE0EB;
-                    &:nth-child(5){
+
+                    &:nth-child(5) {
                         border: none;
                     }
-                    .indicator_type{
+
+                    .indicator_type {
                         font-family: 'Mulish';
                         font-style: normal;
                         font-weight: 600;
@@ -107,7 +122,8 @@
                         text-align: center;
                         margin-bottom: 8px;
                     }
-                    .indicator_number{
+
+                    .indicator_number {
                         font-family: 'Mulish';
                         font-style: normal;
                         font-weight: 700;
@@ -119,29 +135,34 @@
                         text-align: center;
                     }
                 }
-                
+
             }
         }
-        .TaskList{
+
+        .TaskList {
             width: 100%;
             display: flex;
             gap: 30px;
 
-            .UnresolvedTickets, .TodayTasks{
+            .UnresolvedTickets,
+            .TodayTasks {
                 width: 50%;
                 padding: 32px;
                 background: #FFFFFF;
                 border: 1px solid #DFE0EB;
                 border-radius: 8px;
-                .HeaderOverview{
+
+                .HeaderOverview {
                     width: 100%;
                     margin-bottom: 8px;
-                    .header_tickets{
+
+                    .header_tickets {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: flex-end;
-                        .title{
+
+                        .title {
                             font-family: 'Mulish';
                             font-style: normal;
                             font-weight: 700;
@@ -150,9 +171,11 @@
                             letter-spacing: 0.4px;
                             color: #252733;
                         }
-                        a{
+
+                        a {
                             text-decoration: none;
-                            .view_details{
+
+                            .view_details {
                                 font-family: 'Mulish';
                                 font-style: normal;
                                 font-weight: 600;
@@ -165,7 +188,8 @@
                         }
                     }
                 }
-                .group{
+
+                .group {
                     font-family: 'Mulish';
                     font-style: normal;
                     font-weight: 400;
@@ -173,9 +197,13 @@
                     line-height: 16px;
                     letter-spacing: 0.1px;
                     color: #9FA2B4;
+
+                    .group_type {
+                        color: #252733;
+                    }
                 }
             }
-            
+
         }
     }
 }
