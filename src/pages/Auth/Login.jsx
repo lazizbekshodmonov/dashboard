@@ -1,11 +1,14 @@
 import { useRef, useState } from "react";
-import "../../Scss/login.scss";
+import "./login.scss";
 import logo from "./logo.svg";
-import hide from "../../icons/invisible.svg";
-import show from "../../icons/view.svg";
+// import hide from "../../icons/invisible.svg";
+// import show from "../../icons/view.svg";
 import http from "../../services/http";
+import { useNavigate } from "react-router-dom";
+import "../../icons/icomoon/style.css";
 
 const Login = ({ setToken }) => {
+  const navigate = useNavigate();
   const email = useRef(""),
     password = useRef("");
   const [loader, setLoader] = useState(false);
@@ -14,6 +17,7 @@ const Login = ({ setToken }) => {
   function setInput(e) {
     e.preventDefault();
     setLoader(true);
+    window.localStorage.setItem("token", "res.data.token");
     http
       .post("/login", {
         email: email.current.value,
@@ -24,8 +28,10 @@ const Login = ({ setToken }) => {
         setToken(res.data.token);
 
         window.localStorage.setItem("token", res.data.token);
+        navigate("home");
       })
-      .catch(() => {
+      .catch((err) => {
+        window.localStorage.setItem("token", err);
         setError(false);
       })
       .finally(() => {
@@ -75,19 +81,22 @@ const Login = ({ setToken }) => {
               id="exampleInputPassword1"
               placeholder="Password"
             />
-            <img
-              className="passwordType"
-              src={passwordType ? hide : show}
-              alt=""
+
+            <span
+              className={
+                passwordType
+                  ? "passwordType icon-invisible"
+                  : "passwordType icon-view"
+              }
               onClick={() => setPasswordType(!passwordType)}
-            />
+            ></span>
           </div>
           <button type="submit" className="btn btn-primary">
             {loader ? "loading..." : "Log in"}
           </button>
         </form>
         <div className="text_sign_up">
-          <p className="question">Don’t have an account?</p>
+          <p className="question">Don't have an account?</p>
           <p className="sign_up">Sign up</p>
         </div>
       </div>

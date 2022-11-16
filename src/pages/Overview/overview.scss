@@ -1,0 +1,181 @@
+.overview{
+    .container{
+        .Statistics{
+            display: flex;
+            justify-content: space-between;
+            background: #FFFFFF;
+            margin-bottom: 30px;
+            border: 1px solid #DFE0EB;
+            border-radius: 8px;
+            overflow: hidden;
+            .dashboard_chart{
+                width: calc(100% - 342px);
+                padding: 32px;
+                .title{
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 19px;
+                    line-height: 24px;
+                    letter-spacing: 0.4px;
+                    color: #252733;
+                    margin-bottom: 8px;
+                }
+                .time_trends{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 54px;
+                    .time{
+                        font-family: 'Mulish';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.1px;
+                        color: #9FA2B4;
+                    }
+                    .indicator_colors{
+                        display: flex;
+                        .today, .yesterday{
+                            display: flex;
+                            align-items: center;
+                            font-family: 'Mulish';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: 0.1px;
+                            color: #9FA2B4;
+                        }
+                        .today{
+                            margin-right: 32px;
+                            .today_color{
+                                margin-top: 1px;
+                                margin-right: 8px;
+                                width: 16px;
+                                height: 1px;
+                                border-radius: 4px;
+                                background-color: #3751FF;
+                            }
+                        }
+                        .yesterday{
+                            .yesterday_color{
+                                margin-top: 1px;
+                                margin-right: 8px;
+                                width: 16px;
+                                height: 1px;
+                                border-radius: 4px;
+                                background-color: #DFE0EB;
+                            }
+                        }
+                    }
+                }
+                #canvas{
+                    width: 47.6vw;
+                    height: 26.4vw;
+                    border: 1px solid #9FA2B4;
+                }
+            }
+            .indicators{
+                width: 20vw;
+                height: 39vw;
+                border-left: 1px solid #DFE0EB;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .indicators_item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 25%;
+                    border-bottom: 1px solid #DFE0EB;
+                    &:nth-child(5){
+                        border: none;
+                    }
+                    .indicator_type{
+                        font-family: 'Mulish';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 22px;
+                        text-align: center;
+                        letter-spacing: 0.3px;
+                        color: #9FA2B4;
+                        text-align: center;
+                        margin-bottom: 8px;
+                    }
+                    .indicator_number{
+                        font-family: 'Mulish';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 30px;
+                        text-align: center;
+                        letter-spacing: 0.3px;
+                        color: #252733;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+        .TaskList{
+            width: 100%;
+            display: flex;
+            gap: 30px;
+
+            .UnresolvedTickets, .TodayTasks{
+                width: 50%;
+                padding: 32px;
+                background: #FFFFFF;
+                border: 1px solid #DFE0EB;
+                border-radius: 8px;
+                .HeaderOverview{
+                    width: 100%;
+                    margin-bottom: 8px;
+                    .header_tickets{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        .title{
+                            font-family: 'Mulish';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 19px;
+                            line-height: 24px;
+                            letter-spacing: 0.4px;
+                            color: #252733;
+                        }
+                        a{
+                            text-decoration: none;
+                            .view_details{
+                                font-family: 'Mulish';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 20px;
+                                text-align: right;
+                                letter-spacing: 0.2px;
+                                color: #3751FF;
+                            }
+                        }
+                    }
+                }
+                .group{
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.1px;
+                    color: #9FA2B4;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.App{
+    .overview,
+    .tickets,
+    .ideas,
+    .agents,
+    .contacts,
+    .articles,
+    .settings,
+    .subscription{
+        display: flex;
+        background: #F7F8FC;
+        .container{
+            width: calc(100% - 255px);
+            height: calc(100vh - 60px);
+            padding: 30px;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                width: 7px;
+              }
+              
+              /* Track */
+              &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+              }
+              
+              /* Handle */
+              &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 8px;
+                transition: 0.5s;
+                opacity: 0;
+              }
+              
+              /* Handle on hover */
+              
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 54px;
+    // border: 2px solid #000;
+    .user_info{
+        display: flex;
+        align-items: center;
+        .icon-notification{
+            margin-top: 2px;
+            margin-left: 24px;
+            cursor: pointer;
+            color: #3751FF;
+            &::before{
+                transition: 0.3s;
+            }
+            &:hover{
+                &::before{
+                color: #3751FF;
+                transition: 0.3s;
+
+                }
+            }
+        }
+        .searchInput{
+            display: flex;
+            align-items: center;
+            .input_anime{
+                width: 70px;
+                transition: 1s;
+                input{
+                    width: 100%;
+                    border: none;
+                    font-size: 14px;
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    color: #56596b;
+                    border-radius: 4px;
+                    background: transparent;
+                    
+                    
+                }
+                &:hover {
+                    width: 150px;
+                    transition: 1s;
+                    
+                }
+            }
+            
+            img{
+                margin-left: 12px;
+                cursor: pointer;
+            }
+            
+
+            
+        }
+        
+        .user_name{
+            display: flex;
+            justify-content: center;
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: right;
+            letter-spacing: 0.2px;
+            color: #252733;
+            margin-left: 64px;
+            margin-right: 16px;
+            min-width: 90px;
+            position: relative;
+            &::after{
+                position: absolute;
+                bottom: -6px;
+                left: -32px;
+                content: '';
+                width: 1px;
+                height: 32px;
+                background-color: #DFE0EB;
+            }
+        }
+        .user_photo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;  
+            border-radius: 50%;
+            border: 2px solid #DFE0EB;
+            cursor: pointer;
+            transition: 0.5s;
+            img{
+                width: 40px;    
+                height: 40px;
+                border-radius: 50%;
+                display: block;
+            }
+            &:hover{
+                // box-shadow: 0px 0px 3px 2px #3751FF ;
+                border-color: #3751FF;
+                transition: 0.5s;
+            }
+        }
+    }
+    .title{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+        color: #252733;
+    }
+}

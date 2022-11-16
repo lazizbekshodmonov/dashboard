@@ -1,0 +1,98 @@
+.sidebar_container{
+    width: 255px;
+    height: 100vh;
+    background: #363740;
+    .logo_container{
+        display: flex;
+        align-items: center;
+        width: 255px;
+        padding-left:32px;
+        margin-top: 32px;
+        margin-bottom: 59px;
+        img{
+            width: 32px;
+            margin-right: 12px;
+        }
+        h2{
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+            color: #A4A6B3;
+            opacity: 0.7;
+        }
+    }
+    .router_link{
+        .main_router_link, .user_settings{
+            .links{
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: 56px;
+                padding: 0 32px;
+                text-decoration: none;
+                cursor: pointer;
+                &::after{
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    width: 3px;
+                    height: 56px;
+                    background-color: #DDE2FF;
+                    opacity: 0;
+                }
+                &::before{
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 56px;
+                    background: #9FA2B4;
+                    opacity: 0;
+                }
+                span{
+                    margin-right: 24px;
+                    font-size: 16px;
+                    &::before{
+                        color: #9FA2B4;
+
+                    }
+                };
+                .link{
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    color: #A4A6B3;
+                }
+            }
+            .active{
+                &::before{
+                    opacity: 0.08;
+                }
+                &::after{
+                    opacity: 1;
+                }
+                span{
+                    &::before{
+                        color: #DDE2FF
+
+                    }
+
+                }
+                .link{
+                    color: #DDE2FF;
+                }
+            }
+        }
+        .main_router_link{
+            border-bottom: 1px solid #898a96;
+        }
+        
+        
+    }
+}

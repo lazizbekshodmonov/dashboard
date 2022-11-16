@@ -1,0 +1,16 @@
+.settings{
+    .SettingsContainer{
+        width: calc(100% - 255px);
+        padding: 30px;
+        // background: rgb(206, 168, 168);
+        .title{
+            font-family: "Mulish";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.3px;
+            color: #252733;
+        }
+    }
+}
